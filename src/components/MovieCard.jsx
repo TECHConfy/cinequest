@@ -17,6 +17,10 @@ export default function MovieCard({ movie }) {
         />
         <h2 className="font-semibold mt-3">{movie.Title}</h2>
         <p className="text-sm text-gray-600">{movie.Year}</p>
+        <p className="text-sm text-gray-500 mt-1">{movie.Plot}</p>
+        <p className="text-sm font-medium mt-1">
+            IMDb Rating: {movie.imdbRating ? movie.imdbRating: "N/A"}
+        </p>
         <button
         onClick={() => toggleFavorite(movie)}
         className={`mt-3 px-3 py-1 rounded-full text-sm ${
